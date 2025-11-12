@@ -1,3 +1,7 @@
+#https://github.com/NataliaVeltri/lab11-NV-IG/tree/main
+#Partner 1: Natalia Veltri
+#Partner 2: Izzie Gomez
+
 import math
 """
 calculator.py
