@@ -15,18 +15,18 @@ class TestCalculator(unittest.TestCase):
 
     def test_subtract(self): # 3 assertions
         #fill in code
-        self.assertEqual(sub(1,1),0)
-        self.assertEqual(sub(-2,-2),0)
-        self.assertEqual(sub(2,-2),4)
+        self.assertEqual(subtract(1,1),0)
+        self.assertEqual(subtract(-2,-2),0)
+        self.assertEqual(subtract(2,-2),4)
     # ##########################
 
     ######## Partner 1
-     def test_multiply(self): # 3 assertions
+    def test_multiply(self): # 3 assertions
         self.assertEqual(mul(2, 3), 6)
         self.assertEqual(mul(-3, -4), -12)
         self.assertEqual(mul(-4, 2), -8)
 
-     def test_divide(self): # 3 assertions
+    def test_divide(self): # 3 assertions
         self.assertEqual(div(4, 2), 2)
         self.assertEqual(div(4, -2), -2)
         self.assertEqual(div(-6, -2), -3)
@@ -42,24 +42,24 @@ class TestCalculator(unittest.TestCase):
 
     def test_logarithm(self): # 3 assertions
     #     fill in code
-        self.assertEqual(log(2,1),0)
-        self.assertEqual(log(25,5),2)
-        self.assertEqual(log(0.1,10))
+        self.assertEqual(logarithm(2,1),0)
+        self.assertEqual(logarithm(25,5),2)
+        self.assertEqual(logarithm(0.1,10))
 
     def test_log_invalid_base(self): # 1 assertion
     #     # use same technique from test_divide_by_zero
-        self.assertRaises(ValueError,log,5,0)
+        self.assertRaises(ValueError,logarithm,5,0)
     #     fill in code
-        self.assertRaises(ValueError,log,-1,9)
-        self.assertRaises(ValueError,log,1,1)
+        self.assertRaises(ValueError,logarithm,-1,9)
+        self.assertRaises(ValueError,logarithm,1,1)
     
     ######## Partner 1
-     def test_log_invalid_argument(self): # 1 assertion
+    def test_log_invalid_argument(self): # 1 assertion
     #     # call log function inside, example:
     #     # with self.assertRaises(<INSERT_ERROR_TYPE>):
     #     #     logarithm(0, 5)
     #     fill in code
-        self.assertRaises(ValueError, log, -2)
+        self.assertRaises(ValueError, logarithm, -2)
 
 
      def test_hypotenuse(self): # 3 assertions
