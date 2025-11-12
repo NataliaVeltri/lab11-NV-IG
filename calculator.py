@@ -42,10 +42,5 @@ def log(a, b):
         raise ValueError
     return math.log(a, b)
 
-def log(a,b):
-    if a<= 0 or b <=0 or b==1:
-        raise ValueError
-    return math.log(a,b)
-
 def exp(a,b):
     return a**b
