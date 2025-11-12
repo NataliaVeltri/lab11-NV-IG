@@ -70,15 +70,15 @@ class TestCalculator(unittest.TestCase):
 
 
 
-     def test_sqrt(self): # 3 assertions
+    def test_sqrt(self): # 3 assertions
         #     # Test for invalid argument, example:
         #     # with self.assertRaises(<INSERT_ERROR_TYPE>):
         #     #    square_root(NUM)
         #     # Test basic function
         #     fill in code
-            self.assertRaises(ValueError, square_root, -2)
-            self.assertEqual(square_root(4), 2)
-            self.assertEqual(square_root(16, 4))
+        self.assertRaises(ValueError, square_root, -2)
+        self.assertEqual(square_root(4), 2)
+        self.assertEqual(square_root(16, 4))
 
 
 # Do not touch this
