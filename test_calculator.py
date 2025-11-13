@@ -44,7 +44,7 @@ class TestCalculator(unittest.TestCase):
     #     fill in code
         self.assertEqual(logarithm(2,1),0)
         self.assertEqual(logarithm(25,5),2)
-        self.assertEqual(logarithm(0.1,10), -1)
+        self.assertEqual(logarithm(4,0.5), -2.0)
 
     def test_log_invalid_base(self): # 1 assertion
     #     # use same technique from test_divide_by_zero
