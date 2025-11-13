@@ -33,15 +33,18 @@ def mul(a, b):
     return a * b
 
 def div(a, b):
-    if a == 0:
+    if b == 0:
         raise ZeroDivisionError
-    return b / a
+    return a / b
 
 def logarithm(a, b):
-    import math
-    if a <= 0 or b <= 0 or b == 1:
+    if a <= 0:
         raise ValueError
-    return math.log(a, b)
+    if b <= 0:
+        raise ValueError
+    if b == 1:
+        return 0
+    return math.log(a , b)
 
 def exp(a,b):
     return a**b
