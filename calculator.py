@@ -43,6 +43,8 @@ def logarithm(a, b):
     if b <= 0:
         raise ValueError
     if b == 1:
+        if a == 1:
+            raise ValueError
         return 0
     return math.log(a , b)
 
