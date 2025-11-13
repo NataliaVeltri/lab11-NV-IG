@@ -9,7 +9,7 @@ class TestCalculator(unittest.TestCase):
     ######### Partner 2
     def test_add(self): # 3 assertions
         #fill in code
-        self.asserEqual(add(1,2),3)
+        self.assertEqual(add(1,2),3)
         self.assertEqual(add(-1,-2),-3)
         self.assertEqual(add(2,-1),1)
 
@@ -23,20 +23,20 @@ class TestCalculator(unittest.TestCase):
     ######## Partner 1
     def test_multiply(self): # 3 assertions
         self.assertEqual(mul(2, 3), 6)
-        self.assertEqual(mul(-3, -4), -12)
+        self.assertEqual(mul(-3, -4), 12)
         self.assertEqual(mul(-4, 2), -8)
 
     def test_divide(self): # 3 assertions
         self.assertEqual(div(4, 2), 2)
         self.assertEqual(div(4, -2), -2)
-        self.assertEqual(div(-6, -2), -3)
+        self.assertEqual(div(-6, -2), 3)
 
     ######## Partner 2
     def test_divide_by_zero(self): # 1 assertion
     #     # call division function inside, example:
         self.assertEqual(div(2,1),2)
     #     # with self.assertRaises(<INSERT_ERROR_TYPE>):
-        self.assertEqual(div(0, 5),self.assertRaises(ZeroDivisionError))
+        self.assertRaises(ZeroDivisionError, div, 5, 0)
     #     fill in code
         self.assertEqual(div(-5,1),-5)
 
@@ -44,7 +44,7 @@ class TestCalculator(unittest.TestCase):
     #     fill in code
         self.assertEqual(logarithm(2,1),0)
         self.assertEqual(logarithm(25,5),2)
-        self.assertEqual(logarithm(0.1,10))
+        self.assertEqual(logarithm(0.1,10), -1)
 
     def test_log_invalid_base(self): # 1 assertion
     #     # use same technique from test_divide_by_zero
@@ -59,7 +59,7 @@ class TestCalculator(unittest.TestCase):
     #     # with self.assertRaises(<INSERT_ERROR_TYPE>):
     #     #     logarithm(0, 5)
     #     fill in code
-        self.assertRaises(ValueError, logarithm, -2)
+        self.assertRaises(ValueError, logarithm, -2, 10)
 
 
     def test_hypotenuse(self): # 3 assertions
@@ -78,7 +78,7 @@ class TestCalculator(unittest.TestCase):
         #     fill in code
         self.assertRaises(ValueError, square_root, -2)
         self.assertEqual(square_root(4), 2)
-        self.assertEqual(square_root(16, 4))
+        self.assertEqual(square_root(16), 4)
 
 
 # Do not touch this

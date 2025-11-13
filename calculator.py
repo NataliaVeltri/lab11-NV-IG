@@ -11,12 +11,9 @@ One function per operation, in order.
 """
 # First example
 def square_root(a):
-    try:
-        if a < 0:
-            raise ValueError
-        return math.sqrt(a)
-    except ValueError as e:
-        print(f"Error: {e}")
+    if a < 0:
+        raise ValueError
+    return math.sqrt(a)
 
 
 def hypotenuse(a, b):
